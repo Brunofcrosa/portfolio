@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% load static %}
+{% load django_bootstrap5 %}
+<html lang="pt-br" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Portfolio{% endblock %}</title>
+    {% load static %}
+    {% block head %}
+        {% include "head.html" %}
+    {% endblock %}
+</head>
+<body>
+    {% block header %}
+        {% include "componentes/header.html" %}
+    {% endblock %}
+</body>
+</html>
