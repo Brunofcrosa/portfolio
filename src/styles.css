@@ -1,0 +1,18 @@
+.rotate-6deg {
+  transform: rotate(6deg);
+}
+.rotate-minus-6deg {
+  transform: rotate(-6deg);
+}
+.transition-all {
+  transition: all 0.3s ease-in-out;
+}
+.hover-transform:hover {
+  transform: translateY(-5px);
+}
+.hover-shadow-lg:hover {
+  box-shadow: 0 1rem 3rem rgba(0,0,0,.175) !important;
+}
+.bg-gradient-dark-top {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+}
