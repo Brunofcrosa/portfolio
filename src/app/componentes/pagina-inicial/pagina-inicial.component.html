@@ -1,34 +1,36 @@
-<section id="projects" class="py-5 bg-white">
-  <div class="container px-3 px-md-0">
-    <div class="text-center mb-5">
-      <h2 class="display-4 fw-bold text-dark mb-3">Projetos</h2>
-      <p class="lead text-muted">Confira meus trabalhos mais recentes</p>
+<section id="projects" class="projects-section">
+  <div class="container">
+
+    <div class="section-header">
+      <p class="section-label">// meus trabalhos</p>
+      <h2 class="section-title">Projetos em Destaque</h2>
+      <p class="section-subtitle">Uma seleção dos projetos que melhor representam minha evolução técnica</p>
     </div>
+
     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-      <div class="col text-center" *ngFor="let projeto of projetos">
-        <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden transition-all hover-transform hover-shadow-lg">
-          <div class="position-relative" style="height: 200px;">
-            <img [src]="projeto.imagemSrc" class="card-img-top h-100 w-100 object-fit-cover" [alt]="projeto.imagemAlt">
-            <div class="position-absolute bottom-0 start-0 end-0 p-3 bg-gradient-dark-top"></div>
+      <div class="col" *ngFor="let projeto of projetos">
+        <div class="project-card">
+          <div class="project-img-wrapper">
+            <img [src]="projeto.imagemSrc" class="project-img" [alt]="projeto.imagemAlt">
+            <div class="project-img-overlay"></div>
           </div>
-          <div class="card-body d-flex flex-column">
-            <h3 class="card-title h5 fw-bold text-dark mb-2">{{ projeto.titulo }}</h3>
-            <p class="card-text text-muted flex-grow-1 mb-3">
-              {{ projeto.descricao }}
-            </p>
-            <div class="d-flex flex-wrap gap-2 mb-3 justify-content-center">
-              <span class="badge bg-light bg-opacity-50 text-dark rounded-pill py-2 px-3" *ngFor="let tecnologia of projeto.tecnologias">
-                <i class="bi me-1" [ngClass]="tecnologia.icone"></i> {{ tecnologia.nome }}
+          <div class="project-body">
+            <h3 class="project-title">{{ projeto.titulo }}</h3>
+            <p class="project-desc">{{ projeto.descricao }}</p>
+            <div class="project-tags">
+              <span class="project-tag" *ngFor="let tecnologia de projeto.tecnologias">
+                <i class="bi me-1" [ngClass]="tecnologia.icone"></i>{{ tecnologia.nome }}
               </span>
             </div>
           </div>
-          <div class="card-footer bg-transparent border-0 pt-0 pb-4 px-4">
-            <a [href]="projeto.link" class="btn btn-dark rounded-pill px-4 py-2 fw-semibold">
-              <i class="bi bi-github"></i> Website
+          <div class="project-footer">
+            <a [href]="projeto.link" target="_blank" class="project-link">
+              <i class="bi bi-arrow-up-right-square me-2"></i>Ver Projeto
             </a>
           </div>
         </div>
       </div>
     </div>
+
   </div>
 </section>

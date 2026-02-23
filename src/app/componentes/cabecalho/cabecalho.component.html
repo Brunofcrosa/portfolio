@@ -1,36 +1,47 @@
-<section id="home" class="min-vh-100 d-flex align-items-center py-5">
-  <div class="container my-auto">
+<section id="home" class="hero-section">
+  <div class="hero-bg-glow hero-glow-1"></div>
+  <div class="hero-bg-glow hero-glow-2"></div>
+  <div class="hero-grid"></div>
+
+  <div class="container hero-content">
     <div class="row g-5 align-items-center">
-      <div class="col-12 col-md-6">
-        <div class="mb-4">
-          <div class="mb-2">
-            <p class="text-primary font-monospace fs-5">Olá, me chamo</p>
-            <h1 class="display-3 fw-bold text-dark">Bruno Fetzer</h1>
-            <h2 class="h3 fw-semibold text-secondary">Desenvolvedor Web</h2>
-          </div>
-          <p class="lead text-secondary" style="max-width: 450px;">
-            Estudante da graduação em Sistemas para Internet na Universidade Federal de Santa Maria
-            (UFSM)
-          </p>
-          <div class="d-flex gap-3 mt-4">
-            <a href="#projects" class="btn btn-primary btn-lg rounded-pill fw-semibold text-white">
-              Ver Projetos
-            </a>
-            <a href="mailto:brunofcrosa@hotmail.com" class="btn btn-outline-primary btn-lg rounded-pill fw-semibold">
-              Contato
-            </a>
-          </div>
+
+      <div class="col-12 col-md-7">
+        <p class="hero-greeting">// olá, me chamo</p>
+        <h1 class="hero-name">Bruno Fetzer</h1>
+        <h2 class="hero-title">Full Stack Developer</h2>
+        <p class="hero-description">
+          Desenvolvedor Full Stack na <strong>LUMAC RS</strong> — Java 17, Spring Boot 3 e Angular 17+.
+          Foco em Clean Architecture, segurança com Keycloak e microsserviços.
+          Tecnólogo em Sistemas para Internet na <strong>UFSM</strong>.
+        </p>
+        <div class="hero-badges">
+          <span class="tech-badge">Java 17</span>
+          <span class="tech-badge">Spring Boot 3</span>
+          <span class="tech-badge">Angular 17+</span>
+          <span class="tech-badge">Keycloak</span>
+          <span class="tech-badge">Flutter</span>
+        </div>
+        <div class="hero-actions">
+          <a href="#projects" class="btn-primary-hero">Ver Projetos</a>
+          <a href="https://www.linkedin.com/in/brunofcrosa" target="_blank" class="btn-outline-hero">
+            <i class="bi bi-linkedin me-1"></i>LinkedIn
+          </a>
+          <a href="mailto:brunofcrosa@hotmail.com" class="btn-outline-hero">
+            <i class="bi bi-envelope me-1"></i>Contato
+          </a>
         </div>
       </div>
-      <div class="col-12 col-md-6 d-none d-md-block">
-        <div class="position-relative mx-auto" style="width: 320px; height: 320px;">
-          <div class="position-absolute w-100 h-100 bg-info rounded-3 opacity-50 rotate-6deg"></div>
-          <div
-            class="position-absolute w-100 h-100 bg-dark rounded-3 d-flex align-items-center justify-content-center rotate-minus-6deg">
-            <span class="text-white fs-1 fw-bold">BF</span>
+
+      <div class="col-12 col-md-5 d-none d-md-flex justify-content-center">
+        <div class="avatar-wrapper">
+          <div class="avatar-card">
+            <span class="avatar-initials">BF</span>
           </div>
+          <div class="avatar-ring"></div>
         </div>
       </div>
+
     </div>
   </div>
 </section>
