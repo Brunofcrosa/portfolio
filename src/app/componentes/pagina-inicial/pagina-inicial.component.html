@@ -1,31 +1,27 @@
 <section id="projects" class="projects">
   <div class="container">
 
-    <div class="projects-header">
-      <span class="section-tag">Projetos</span>
-      <h2 class="projects-title">O que eu construo</h2>
+    <div class="sec-head">
+      <span class="sec-tag">Projetos</span>
+      <h2 class="sec-title">O que eu construo</h2>
     </div>
 
-    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
-      <div class="col" *ngFor="let projeto of projetos">
-        <a [href]="projeto.link" target="_blank" class="card-link">
-          <div class="proj-card">
-            <div class="proj-img-wrap">
-              <img [src]="projeto.imagemSrc" class="proj-img" [alt]="projeto.imagemAlt">
-            </div>
-            <div class="proj-body">
-              <div class="proj-tags">
-                <span class="proj-tag" *ngFor="let t of projeto.tecnologias">{{ t.nome }}</span>
-              </div>
-              <h3 class="proj-title">{{ projeto.titulo }}</h3>
-              <p class="proj-desc">{{ projeto.descricao }}</p>
-            </div>
-            <div class="proj-footer">
-              <span class="proj-cta">Ver projeto <i class="bi bi-arrow-right ms-1"></i></span>
-            </div>
+    <div class="proj-grid">
+      <a [href]="projeto.link" target="_blank" class="proj-card" *ngFor="let projeto of projetos">
+        <div class="proj-img-box">
+          <img [src]="projeto.imagemSrc" [alt]="projeto.imagemAlt" class="proj-img">
+        </div>
+        <div class="proj-body">
+          <div class="proj-techs">
+            <span class="proj-tech" *ngFor="let t of projeto.tecnologias">{{ t.nome }}</span>
           </div>
-        </a>
-      </div>
+          <h3 class="proj-title">{{ projeto.titulo }}</h3>
+          <p class="proj-desc">{{ projeto.descricao }}</p>
+        </div>
+        <div class="proj-foot">
+          <span class="proj-cta">Ver projeto &rarr;</span>
+        </div>
+      </a>
     </div>
 
   </div>
