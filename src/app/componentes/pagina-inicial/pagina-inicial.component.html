@@ -1,34 +1,30 @@
-<section id="projects" class="projects-section">
+<section id="projects" class="projects">
   <div class="container">
 
-    <div class="section-header">
-      <p class="section-label">// meus trabalhos</p>
-      <h2 class="section-title">Projetos em Destaque</h2>
-      <p class="section-subtitle">Uma seleção dos projetos que melhor representam minha evolução técnica</p>
+    <div class="projects-header">
+      <span class="section-tag">Projetos</span>
+      <h2 class="projects-title">O que eu construo</h2>
     </div>
 
-    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
       <div class="col" *ngFor="let projeto of projetos">
-        <div class="project-card">
-          <div class="project-img-wrapper">
-            <img [src]="projeto.imagemSrc" class="project-img" [alt]="projeto.imagemAlt">
-            <div class="project-img-overlay"></div>
-          </div>
-          <div class="project-body">
-            <h3 class="project-title">{{ projeto.titulo }}</h3>
-            <p class="project-desc">{{ projeto.descricao }}</p>
-            <div class="project-tags">
-              <span class="project-tag" *ngFor="let tecnologia de projeto.tecnologias">
-                <i class="bi me-1" [ngClass]="tecnologia.icone"></i>{{ tecnologia.nome }}
-              </span>
+        <a [href]="projeto.link" target="_blank" class="card-link">
+          <div class="proj-card">
+            <div class="proj-img-wrap">
+              <img [src]="projeto.imagemSrc" class="proj-img" [alt]="projeto.imagemAlt">
+            </div>
+            <div class="proj-body">
+              <div class="proj-tags">
+                <span class="proj-tag" *ngFor="let t of projeto.tecnologias">{{ t.nome }}</span>
+              </div>
+              <h3 class="proj-title">{{ projeto.titulo }}</h3>
+              <p class="proj-desc">{{ projeto.descricao }}</p>
+            </div>
+            <div class="proj-footer">
+              <span class="proj-cta">Ver projeto <i class="bi bi-arrow-right ms-1"></i></span>
             </div>
           </div>
-          <div class="project-footer">
-            <a [href]="projeto.link" target="_blank" class="project-link">
-              <i class="bi bi-arrow-up-right-square me-2"></i>Ver Projeto
-            </a>
-          </div>
-        </div>
+        </a>
       </div>
     </div>
 
